@@ -1,0 +1,95 @@
+#page_specialities_and_services_description_section {
+    display: flex;
+    align-items: center;
+    
+    width: 100%;
+    min-height: 40rem;
+}
+#page_specialities_and_services_description_article {
+    display: grid;
+    grid-template-areas: 'page_specialities_and_services_description_article_left page_specialities_and_services_description_article_right';
+    grid-template-columns: 0.6FR 0.4FR;
+
+    margin: auto;
+    padding: 3rem;
+
+    width: 100%;
+    max-width: 120rem;
+}
+
+.page_specialities_and_services_description_article_left_right {
+    width: 100%;
+    height: 100%;
+}
+
+#page_specialities_and_services_description_article_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: baseline;
+
+    padding-right: 2rem;
+}
+#page_specialities_and_services_description_div_text span {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--color-gray-secondary);
+}
+
+#page_specialities_and_services_description_div_img_filter {
+    position: absolute;
+
+    width: 100%;
+    min-height: 40rem;
+    
+    background-image: linear-gradient(var(--color-filter-primary), var(--color-filter-secondary));
+
+    z-index: 1;
+} 
+#page_specialities_and_services_description_article_right {
+    position: relative;
+
+    min-height: 40rem;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}   
+
+
+/* 540px < */
+@media only screen and (max-width: 540px) {
+
+    #page_specialities_and_services_description_div_text span {
+        font-size: 1.2rem;
+    }
+
+}
+
+
+/* 960px < */
+@media only screen and (max-width: 960px) {
+
+    #page_specialities_and_services_description_section {
+        min-height: 60rem;
+    }
+
+    #page_specialities_and_services_description_article {
+        grid-template-areas: 'page_specialities_and_services_description_article_left';
+        grid-template-columns: 1FR;
+    }
+
+    #page_specialities_and_services_description_article_left {
+        align-items: center;
+
+        padding-right: 0rem;
+    }
+    #page_specialities_and_services_description_article_left div {
+        margin: 1rem 0rem;
+    }
+
+    #page_specialities_and_services_description_article_right {
+        display: none;
+    }
+
+}

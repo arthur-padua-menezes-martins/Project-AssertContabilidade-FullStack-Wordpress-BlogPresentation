@@ -1,0 +1,160 @@
+#StyledFooter {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 38rem;
+    font-size: 1.6rem;
+    color: #FFFFFF;
+}
+
+#StyledFooterTop {
+    display: flex;
+    align-items: center;
+    min-height: 6rem;
+    background-color: var(--color-secondary);
+}
+
+#StyledArticleFooterTop {
+    display: grid;
+    grid-template-areas: 'TopMessage TopSocialNetwork';
+    grid-template-columns: 1FR 0.5FR;
+
+    margin: auto;
+    width: 100%;
+    max-width: 120rem;
+}
+
+#StyledTopMessage, #StyledTopSocialNetwork {
+    display: flex;
+    align-items: center;
+    margin: 0rem 2rem;
+}
+
+#StyledTopMessage {
+    grid-area: TopMessage;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+#StyledTopMessage span, #StyledTopMessage span strong {
+    font-size: 1.4rem;
+}
+
+#StyledTopSocialNetwork {
+    grid-area: TopSocialNetwork;
+    justify-content: flex-end;
+}
+
+#StyledTopSocialNetwork img {
+    min-width: 2rem;
+    min-height: 2rem;
+    max-height: 2rem;
+}
+
+#StyledFooterMiddle {
+    min-height: 27rem;
+    background-color: var(--color-primary);
+}
+
+#StyledArticleFooterMiddle {
+    display: grid;
+    grid-template-areas: 'StyledMiddleAbout StyledMiddleMyAccount StyledMiddleContactUs';
+    grid-template-columns: 1FR 1FR 1FR;
+
+    justify-content: space-around;
+    align-items: center;
+
+    margin: auto;
+
+    width: 100%;
+    max-width: 120rem;
+    height: 100%;
+    min-height: 27rem;
+}
+
+#StyledMiddleAbout, #StyledMiddleMyAccount, #StyledMiddleContactUs {
+    margin: 0rem;
+    min-height: 24rem;
+}
+
+#StyledMiddleAbout ul li, #StyledMiddleMyAccount ul li, #StyledMiddleContactUs ul li {
+    margin: 0rem 2rem;
+    text-align: left;
+    font-size: 2rem;
+}
+
+#StyledMiddleAbout ul li img, #StyledMiddleMyAccount ul li img, #StyledMiddleContactUs ul li img {
+    min-height: 1.4rem;
+    max-height: 1.4rem;
+    min-width: 3rem;
+    max-width: 3rem;
+}
+
+#StyledMiddleAbout>ul>li span, #StyledMiddleMyAccount>ul>li span, #StyledMiddleContactUs>ul>li span {
+    font-size: 3rem;
+}
+
+#StyledMiddleAbout ul:last-child li a:hover, #StyledMiddleMyAccount ul:last-child li a:hover, #StyledMiddleContactUs ul:last-child li a:hover {
+    color: #CCCCCC;
+}
+
+#StyledMiddleAbout {
+    grid-area: StyledMiddleAbout;
+}
+
+#StyledMiddleMyAccount {
+    grid-area: StyledMiddleMyAccount;
+}
+
+#StyledMiddleContactUs {
+    grid-area: StyledMiddleContactUs;
+}
+
+#StyledFooterBottom {
+    display: flex;
+    align-items: center;
+    min-height: 5rem;
+    background-color: #161C27;
+}
+
+#StyledArticleFooterBottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#StyledArticleFooterBottom span, #StyledArticleFooterBottom span a {
+    font-size: 1.4rem;
+}
+
+#StyledArticleFooterBottom span:first-child {
+    color: rgba(102, 102, 102, 1);
+}
+
+@media only screen and (max-width: 1000px) {
+    #StyledFooterTop {
+        min-height: 8rem;
+    }
+    #StyledArticleFooterTop {
+        grid-template-areas: 'TopMessage' 'TopSocialNetwork';
+        grid-template-columns: 1FR;
+        grid-template-rows: 4rem 4rem;
+    }
+    #StyledTopMessage, #StyledTopSocialNetwork {
+        justify-content: center;
+    }
+    #StyledArticleFooterMiddle {
+        grid-template-areas: 'StyledMiddleAbout' 'StyledMiddleMyAccount' 'StyledMiddleContactUs';
+        grid-template-columns: 1FR;
+        min-height: 64rem;
+    }
+    #StyledMiddleAbout, #StyledMiddleMyAccount, #StyledMiddleContactUs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #StyledMiddleAbout ul li, #StyledMiddleMyAccount ul li, #StyledMiddleContactUs ul li {
+        text-align: center;
+    }
+}

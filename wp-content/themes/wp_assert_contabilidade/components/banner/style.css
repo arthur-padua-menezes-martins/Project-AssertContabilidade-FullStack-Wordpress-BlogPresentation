@@ -1,0 +1,162 @@
+#banner_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+#banner_section input[type=radio] {
+    display: none;
+}
+
+#banner_section label {
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+#banner_article_sliders {
+    position: relative;
+
+    z-index: 1;
+}
+
+#sliders {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide_filter {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    
+    background-image: linear-gradient(var(--color-filter-primary), var(--color-filter-secondary));
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slide_image {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.inner {
+    position: relative;
+    overflow: hidden;
+}
+#slide_0:checked ~ #banner_article_sliders .inner {
+   margin-left: 0rem; 
+}
+#slide_1:checked ~ #banner_article_sliders .inner {
+    margin-left: -100%; 
+}
+#slide_2:checked ~ #banner_article_sliders .inner {
+    margin-left: -200%; 
+}
+#slide_3:checked ~ #banner_article_sliders .inner {
+    margin-left: -300%; 
+}
+
+#banner_article_sliders .inner {
+    width: 300%;
+    height: 60rem;
+
+    line-height: 0;
+
+    transition: margin-left 0.8s cubic-bezier(0.770,0.000,0.175,1.000);
+}
+
+#sliders .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+
+    width: 33.333333%;
+    height: 100%;
+}
+
+.slide_content {
+    display: flex;
+    flex-direction: column;
+
+    z-index: 2;
+}
+.slide_content span {
+    margin: 1rem;
+
+    line-height: 3.2rem;
+    font-size: 2.6rem;
+    color: #FFFFFF;
+}
+.slide_content strong {
+    font-size: 2.6rem;
+    font-weight: 600;
+}
+.slide_content_msg {
+    width: 180%;
+    pointer-events: none;
+}
+
+#banner_article_controls {
+    position: absolute;
+
+    width: 100%;
+    height: 5rem;
+
+    z-index: 5;
+}
+#banner_article_controls label {
+    display: none;
+
+    width: 5rem;
+    height: 3rem;
+
+    opacity: 0.4;
+
+    transition: opacity 0.4s ease-out;
+
+    z-index: 4;
+}
+#banner_article_controls label:hover {
+    opacity: 1;
+}
+#slide_0:checked ~ #banner_article_controls label:nth-child(2),
+#slide_1:checked ~ #banner_article_controls label:nth-child(3),
+#slide_2:checked ~ #banner_article_controls label:nth-child(1) {
+    margin-right: 3rem;
+
+    display: block;
+    float: right;
+
+    background: url(http://localhost/Wordpress/wordpress/wp-content/themes/wp_assert_contabilidade/components/svg/arrow_medium_white.svg) no-repeat;
+    transform: rotate(-90deg);
+
+}
+#slide_0:checked ~ #banner_article_controls label:nth-child(3),
+#slide_1:checked ~ #banner_article_controls label:nth-child(1),
+#slide_2:checked ~ #banner_article_controls label:nth-child(2) {
+    margin-left: 3rem;
+
+    display: block;
+    float: left;
+
+    background: url(http://localhost/Wordpress/wordpress/wp-content/themes/wp_assert_contabilidade/components/svg/arrow_medium_white.svg) no-repeat;
+    transform: rotate(90deg);
+}
+
+
+/* 800px < */
+@media only screen and (max-width: 800px) {
+
+    .slide_content_msg {
+        width: 200%;
+    }
+
+}
